@@ -1,0 +1,29 @@
+{
+    "name": "rodrigoyuri/clone-twitter",
+    "description": "Clone simples da rede social Twitter",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rodrigo Yuri Veloso",
+            "email": "rodrigo_yuri@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "Source\\": "source/"
+        },
+        "files": [
+            "source/Config.php"
+        ]
+    },
+    "require": {
+        "coffeecode/router": "1.0.*",
+        "coffeecode/datalayer": "1.1.*",
+        "vlucas/phpdotenv": "^5.2"
+    }
+}
