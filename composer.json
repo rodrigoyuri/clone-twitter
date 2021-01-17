@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Source\\": "source/"
+            "Source\\": "source"
         },
         "files": [
             "source/Config.php"
@@ -24,6 +24,7 @@
     "require": {
         "coffeecode/router": "1.0.*",
         "coffeecode/datalayer": "1.1.*",
-        "vlucas/phpdotenv": "^5.2"
+        "vlucas/phpdotenv": "^5.2",
+        "league/plates": "^3.4"
     }
 }
