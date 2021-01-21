@@ -26,6 +26,36 @@
             </div>
         </div>
     </div>
+    
+</div>
+<div class="modal-container">
+    <div class="modal-content">
+        <div class="close-modal">
+            <span>&times;</span>
+        </div>
+        <div class="forms">
+            <div class="form-content-login">
+                <div class="form-login-header">
+                    <img src="<?= urlAssets("img/twitter-logo.svg")?>" alt=""> 
+                    <h3>Login in to Twitter</h3>
+                </div>
+
+                <div class="form-login">                    
+                    <input type="email" name="email" id="email" placeholder="E-mail">
+
+                    <input type="password" name="password" id="password" placeholder="Password">
+
+                    <button type="submit">Log in</button>
+
+                    <div class="forget">
+                        <a href="#">Esqueceu a senha?</a>  .  <a href="#">Sing up for Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-register"></div>
+        </div>
+    </div>
 </div>
 <!-- <div class="form">
         <form action="" class="form-login">
