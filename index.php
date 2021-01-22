@@ -2,11 +2,11 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-require __DIR__ . "/source/Controller/UserController.php";
+require __DIR__ . "/source/Controllers/UserController.php";
 
 $router = new \CoffeeCode\Router\Router(BASE_URL);
 
-$router->namespace("Source\Controller");
+$router->namespace("Source\Controllers");
 
 $router->group(null);
 $router->get("/", "User:renderLogin");
