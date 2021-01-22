@@ -1,15 +1,15 @@
 <?php
 
-require __DIR__ . "/vendor/autoload.php";
+use Source\Controllers\UserController;
 
-require __DIR__ . "/source/Controllers/UserController.php";
+require __DIR__ . "/vendor/autoload.php";
 
 $router = new \CoffeeCode\Router\Router(BASE_URL);
 
 $router->namespace("Source\Controllers");
 
 $router->group(null);
-$router->get("/", "User:renderLogin");
+$router->get("/", "UserController:renderLogin");
 
 $router->group("ops");
 $router->get("/{errcode}", function($data) {
