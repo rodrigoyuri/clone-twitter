@@ -34,40 +34,47 @@
             <span>&times;</span>
         </div>
         <div class="forms">
-            <div class="form-content-login">
-                <div class="form-login-header">
-                    <img src="<?= urlAssets("img/twitter-logo.svg")?>" alt=""> 
-                    <h3>Login in to Twitter</h3>
+            <div class="forms-content">
+                <div class="content-login">
+                    <div class="form-login-header">
+                        <img src="<?= urlAssets("img/twitter-logo.svg")?>" alt=""> 
+                        <h3>Login in to Twitter</h3>
+                    </div>
+
+                    <div class="form-login">                    
+                        <input type="email" class="form-input" name="email-login" id="email-login" placeholder="E-mail">
+
+                        <input type="password" class="form-input" name="password-login" id="password-login" placeholder="Password">
+
+                        <button type="submit" class="form-button">Log in</button>
+
+                        <div class="forget">
+                            <a href="#">Esqueceu a senha?</a>  .  <a href="#">Sing up for Twitter</a>
+                        </div>
+                    </div>
                 </div>
+                <div class="content-register">
+                    <div class="form-register-header">
+                        <img src="<?= urlAssets("img/twitter-logo.svg")?>" alt=""> 
+                        <h3>Register in to Twitter</h3>
+                    </div>
+                    <div class="form-register">
+                        <input type="text" class="form-input" name="name" id="name" placeholder="Username">
 
-                <div class="form-login">                    
-                    <input type="email" name="email" id="email" placeholder="E-mail">
+                        <input type="email" class="form-input" name="email-register" id="email-register" placeholder="E-mail">
 
-                    <input type="password" name="password" id="password" placeholder="Password">
+                        <input type="password" class="form-input" name="password-register" id="password-register" placeholder="Password">
 
-                    <button type="submit">Log in</button>
+                        <input type="password" class="form-input" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
 
-                    <div class="forget">
-                        <a href="#">Esqueceu a senha?</a>  .  <a href="#">Sing up for Twitter</a>
+                        <button type="submit" class="form-button">Log in</button>
+
+                        <div class="forget">
+                            <span>Já tem uma conta?</span>  .  <a href="#">Log in for Twitter</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="form-register"></div>
         </div>
     </div>
 </div>
-<!-- <div class="form">
-        <form action="" class="form-login">
-            <div class="inputs-login">
-                <label for="">E-mail</label>
-                <input type="email" name="email" id="email">
-
-                <label for="">Senha</label>
-                <input type="password" name="password" id="password">
-            </div>
-            <div class="button-login">
-                <button type="submit">Logar</button> 
-            </div>
-        </form>
-    </div> -->

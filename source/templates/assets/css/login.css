@@ -109,7 +109,7 @@
 
 .modal-content {
     width: 40rem;
-    height: 30rem;
+    height: 35rem;
     background-color: #15202b;
 }
 
@@ -132,12 +132,24 @@
     height: calc(100% - 47px);
 }
 
-.form-content-login {
+.forms-content {
     width: 100%;
     height: 100%;
 }
 
-.form-login-header {
+.content-login, .content-register {
+    height: 100%;
+}
+
+.content-login {
+    display: none;
+}
+
+.content-register {
+    display: block;
+}
+
+.form-login-header, .form-register-header {
     display: flex;
     flex-direction: column; 
     justify-content: space-evenly;
@@ -152,7 +164,7 @@
     background-position: center;
 }
 
-.form-login {
+.form-login, .form-register {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -164,7 +176,7 @@
     height: 70%;
 }
 
-.form-login input {
+.form-input {
     width: 70%;
     height: 50px;
     border: 1px solid #767676;
@@ -178,11 +190,11 @@
     outline: none;
 }
 
-.form-login input:focus {
+.form-input:focus {
     border: 1px solid var(--main-color);
 }
 
-.form-login button {
+.form-button {
     width: 70%;
     height: 50px;
     border: none;
@@ -194,7 +206,7 @@
     font-family: var(--font-lato);
 }
 
-.form-login button:hover {
+.form-button:hover {
     cursor: pointer;
     background-color: var(--main-color-hover);
 }
@@ -214,6 +226,8 @@
     text-decoration: none;
     color: #FFF;
 }
+
+
 
 @media screen and (max-width: 800px) {
     .login {
