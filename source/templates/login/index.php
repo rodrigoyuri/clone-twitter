@@ -28,10 +28,11 @@
     </div>
     
 </div>
+
 <div class="modal-container">
     <div class="modal-content">
         <div class="close-modal">
-            <span>&times;</span>
+            <span id="close-modal">&times;</span>
         </div>
         <div class="forms">
             <div class="forms-content">
@@ -46,13 +47,14 @@
 
                         <input type="password" class="form-input" name="password-login" id="password-login" placeholder="Password">
 
-                        <button type="submit" class="form-button">Log in</button>
+                        <button id="btn-login" class="form-button">Log in</button>
 
                         <div class="forget">
-                            <a href="#">Esqueceu a senha?</a>  .  <a href="#">Sing up for Twitter</a>
+                            <a href="#">Esqueceu a senha?</a>  .  <a href="#" id="sing-up">Sing up for Twitter</a>
                         </div>
                     </div>
                 </div>
+
                 <div class="content-register">
                     <div class="form-register-header">
                         <img src="<?= urlAssets("img/twitter-logo.svg")?>" alt=""> 
@@ -67,10 +69,10 @@
 
                         <input type="password" class="form-input" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
 
-                        <button type="submit" class="form-button">Log in</button>
+                        <button type="submit" id="btn-register" class="form-button">Register</button>
 
                         <div class="forget">
-                            <span>Já tem uma conta?</span>  .  <a href="#">Log in for Twitter</a>
+                            <span>Já tem uma conta?</span>  .  <a href="#" id="log-in">Log in for Twitter</a>
                         </div>
                     </div>
                 </div>
@@ -78,3 +80,9 @@
         </div>
     </div>
 </div>
+
+<?php $this->start('scripts') ?>
+
+<script src="<?= urlAssets("js/login.js") ?>"></script>
+
+<?php $this->stop() ?>
