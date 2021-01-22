@@ -10,6 +10,7 @@ $router->namespace("Source\Controllers");
 
 $router->group(null);
 $router->get("/", "UserController:renderLogin");
+$router->post("/register", "UserController:create");
 
 $router->group("ops");
 $router->get("/{errcode}", function($data) {
