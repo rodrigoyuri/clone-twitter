@@ -4,7 +4,7 @@ namespace Source\Controllers;
 
 use League\Plates\Engine;
 
-class User 
+class UserController 
 {
     private $view;
 
