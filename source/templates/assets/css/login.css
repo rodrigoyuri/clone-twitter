@@ -101,7 +101,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
@@ -123,6 +123,7 @@
     color: #FFF;
     font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .forms {
@@ -146,7 +147,7 @@
 }
 
 .content-register {
-    display: block;
+    display: none;
 }
 
 .form-login-header, .form-register-header {
