@@ -1,40 +1,35 @@
-let spanClose = document.getElementById('close-modal')
+$(document).ready(function() {
 
-let modalContainer = document.querySelector('.modal-container')
-let contentLogin = document.querySelector('.content-login')
-let contentRegister = document.querySelector('.content-register')
+    const formRegister = $('#form-register')
+    const formLogin = $('#form-login')
 
-let btnSingUp = document.querySelector('.sing-up')
-let btnLogIn = document.querySelector('.log-in')
+    formRegister.on('submit', (event) => {
+        event.preventDefault()
+        ajax(
+            formRegister.serializeArray(), 
+            formRegister.attr('action')
+        )
+    })
+    
+    formLogin.on('submit', (event) => {
+        event.preventDefault()
+        ajax(
+            formLogin.serializeArray(), 
+            formLogin.attr('action')
+        )
+    })
 
-let linkSingUp = document.getElementById('sing-up')
-let linkLogIn = document.getElementById('log-in')
-
-spanClose.addEventListener('click', () => {
-    modalContainer.style.display = 'none'
+    const ajax = (data, url) => {
+        $.ajax({
+            method: 'POST',
+            url: url,
+            data: data,
+        })
+        .done((response) => {
+            console.log(response)
+        })
+        .fail((error) => {
+            console.log(`Erro: ${error}`)
+        })
+    }
 })
-
-const showModal = (logInDisplay = 'none', singUpDisplay = 'none') => {
-    modalContainer.style.display = 'flex'
-    contentLogin.style.display = logInDisplay
-    contentRegister.style.display = singUpDisplay
-}
-
-btnSingUp.addEventListener('click', () => {
-    showModal('none', 'block')
-})
-
-btnLogIn.addEventListener('click', () => {
-    showModal('block', 'none')
-})
-
-linkSingUp.addEventListener('click', (el) => {
-    el.preventDefault()
-    showModal('none', 'block')
-})
-
-linkLogIn.addEventListener('click', (el) => {
-    el.preventDefault()
-    showModal('block', 'none')
-})
-
