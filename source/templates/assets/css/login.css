@@ -109,7 +109,7 @@
 
 .modal-content {
     width: 40rem;
-    height: 35rem;
+    height: 36rem;
     background-color: #15202b;
 }
 
@@ -177,6 +177,15 @@
     height: 70%;
 }
 
+.form-login form, .form-register form {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .form-input {
     width: 70%;
     height: 50px;
@@ -205,6 +214,7 @@
     font-size: 1rem;
     font-weight: bold;
     font-family: var(--font-lato);
+    outline: none;
 }
 
 .form-button:hover {
@@ -212,15 +222,12 @@
     background-color: var(--main-color-hover);
 }
 
-.forget {
+.forget, .link-log-in {
     display: flex;
     justify-content: space-around;
     font-size: 14px;
     width: 40%;
-}
-
-.forget a:hover {
-    color: var(--main-color-hover);
+    margin-bottom: 1rem;
 }
 
 .forget a {
@@ -228,7 +235,18 @@
     color: #FFF;
 }
 
+.forget a:hover {
+    color: var(--main-color-hover);
+}
 
+.link-log-in a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.link-log-in a:hover {
+    color: var(--main-color-hover);
+}
 
 @media screen and (max-width: 800px) {
     .login {

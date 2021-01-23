@@ -43,11 +43,13 @@
                     </div>
 
                     <div class="form-login">                    
-                        <input type="email" class="form-input" name="email-login" id="email-login" placeholder="E-mail">
+                        <form id="form-login" action="<?=url("login")?>">
+                            <input type="email" class="form-input" name="email-login" id="email-login" placeholder="E-mail">
 
-                        <input type="password" class="form-input" name="password-login" id="password-login" placeholder="Password">
+                            <input type="password" class="form-input" name="password-login" id="password-login" placeholder="Password">
 
-                        <button id="btn-login" class="form-button">Log in</button>
+                            <button type="submit" id="btn-login" class="form-button">Log in</button>
+                        </form>
 
                         <div class="forget">
                             <a href="#">Esqueceu a senha?</a>  .  <a href="#" id="sing-up">Sing up for Twitter</a>
@@ -61,17 +63,19 @@
                         <h3>Register in to Twitter</h3>
                     </div>
                     <div class="form-register">
-                        <input type="text" class="form-input" name="name" id="name" placeholder="Username">
+                        <form action="<?= url("register")?>" id="form-register">
+                            <input type="text" class="form-input" name="name" id="name" placeholder="Username">
 
-                        <input type="email" class="form-input" name="email-register" id="email-register" placeholder="E-mail">
+                            <input type="email" class="form-input" name="email-register" id="email-register" placeholder="E-mail">
 
-                        <input type="password" class="form-input" name="password-register" id="password-register" placeholder="Password">
+                            <input type="password" class="form-input" name="password-register" id="password-register" placeholder="Password">
 
-                        <input type="password" class="form-input" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+                            <input type="password" class="form-input" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
 
-                        <button type="submit" id="btn-register" class="form-button">Register</button>
+                            <button type="submit" id="btn-register" class="form-button">Register</button>
+                        </form>
 
-                        <div class="forget">
+                        <div class="link-log-in">
                             <span>Já tem uma conta?</span>  .  <a href="#" id="log-in">Log in for Twitter</a>
                         </div>
                     </div>
@@ -84,5 +88,6 @@
 <?php $this->start('scripts') ?>
 
 <script src="<?= urlAssets("js/login.js") ?>"></script>
+<script src="<?= urlAssets("js/modal-manipulation.js") ?>"></script>
 
 <?php $this->stop() ?>
