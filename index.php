@@ -11,6 +11,7 @@ $router->namespace("Source\Controllers");
 $router->group(null);
 $router->get("/", "UserController:renderLogin");
 $router->post("/register", "UserController:create");
+$router->post("/login", "UserController:login");
 
 $router->group("ops");
 $router->get("/{errcode}", function($data) {
