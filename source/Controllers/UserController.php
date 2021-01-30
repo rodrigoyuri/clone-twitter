@@ -24,11 +24,12 @@ class UserController
     public function create($data) : void
     {
         $user = $this->user->createUser($data);
-     
-        if($user) {
-            echo json_encode(array("msg" => "Cadastro realizado com sucesso!"));
-        } else {
-            echo json_encode(array("msg" => "Erro ao efetuar o cadastro"));
-        }
+        echo json_encode($user);
+    }
+
+    public function login($data)
+    {
+        $user = $this->user->authenticateUser($data);
+        echo json_encode($user);
     }
 }
