@@ -116,4 +116,23 @@ export default {
     width: 90%;
     height: 10rem;
 }
+
+@media screen and (max-width: 800px) {
+    .login {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        overflow-y: scroll;
+    }
+
+    .image-background {
+        width: 100%;
+        background-position: center;
+    }
+
+    .actions {
+        width: 100%;
+        padding: 1rem 0;
+    }
+}
 </style>
