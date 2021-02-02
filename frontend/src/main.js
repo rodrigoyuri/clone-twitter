@@ -1,5 +1,22 @@
 import { createApp } from 'vue';
+import { createStore } from 'vuex';
 import App from './App.vue';
 import router from './router';
 
-createApp(App).use(router).mount('#app');
+const store = createStore({
+  state() {
+    return {
+      isVisible: '',
+    };
+  },
+  mutations: {
+    reset(state, payload) {
+      state.isVisible = payload.valueState;
+    },
+  },
+});
+
+const app = createApp(App);
+app.use(router);
+app.use(store);
+app.mount('#app');
