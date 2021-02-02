@@ -13,22 +13,39 @@
           <div class="text-action">
             <h3>Join Twitter today.</h3>
           </div>
-          <Button className="sing-up" textButton="Sing Up" />
-          <Button className="log-in" textButton="Log In" />
+          <Button className="sing-up" textButton="Sing Up" @click="showModal('register')" />
+          <Button className="log-in" textButton="Log In" @click="showModal('login')" />
         </div>
       </div>
     </div>
+    <Modal />
   </div>
 </template>
 
 <script>
 import Button from '@/components/Button.vue';
-// import Modal from '@/components/login/Modal.vue';
+import Modal from '@/components/login/Modal.vue';
+import { useStore } from 'vuex';
 
 export default {
+  setup() {
+    const store = useStore();
+    return {
+      store,
+    };
+  },
   name: 'Login',
   components: {
     Button,
+    Modal,
+  },
+  methods: {
+    showModal(modal) {
+      this.store.commit({
+        type: 'reset',
+        valueState: modal,
+      });
+    },
   },
 };
 </script>
